@@ -10,19 +10,15 @@ export class ArSceneComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.setupEeveeInteraction();
+    this.setupARScene();
   }
 
-  setupEeveeInteraction(): void {
+  setupARScene(): void {
     document.addEventListener('DOMContentLoaded', () => {
-      const eeveeEntity = document.querySelector('a-entity[obj-model]') as any;
-      if (eeveeEntity) {
-        eeveeEntity.addEventListener('click', () => {
-          const currentRotation = eeveeEntity.getAttribute('rotation');
-          const newY = (currentRotation.y + 45) % 360;
-          eeveeEntity.setAttribute('rotation', `${currentRotation.x} ${newY} ${currentRotation.z}`);
-        });
-      }
+      navigator.geolocation.getCurrentPosition((position) => {
+        const entity = document.querySelector('[gps-entity-place]') as any;
+        entity.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
+      });
     });
   }
 }
