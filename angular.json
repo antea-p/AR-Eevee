@@ -93,7 +93,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/antea-p/AR-Eevee.git",
+            "name": "Antea P",
+            "email": "antea.primorac0@gmail.com"
+          }
         }
       }
     }
