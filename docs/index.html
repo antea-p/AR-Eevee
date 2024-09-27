@@ -1,14 +1,33 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
-  <title>AR-Eevee</title>
+  <title>AR Eevee</title>
   <base href="/AR-Eevee/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+<style>body{margin:0;overflow:hidden;position:fixed;width:100%;height:100%}</style><link rel="stylesheet" href="styles.327303e71b76152e.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.327303e71b76152e.css"></noscript></head>
 <body style="margin: 0; overflow: hidden;">
+  <a-scene embedded="" arjs="">
+
+    <a-assets>
+      <a-asset-item id="eevee-obj" src="assets/eevee/eevee.obj"></a-asset-item>
+      <a-asset-item id="eevee-mtl" src="assets/eevee/eevee.mtl"></a-asset-item>
+    </a-assets>
+
+    <a-marker preset="hiro">
+
+
+
+
+      <a-entity position="0 0 0" rotation="0 0 0" scale="0.3048 0.3048 0.3048" obj-model="obj: #eevee-obj; mtl: #eevee-mtl" -=""></a-entity>
+
+    </a-marker>
+    <a-entity camera=""></a-entity>
+
+  </a-scene>
 <app-root></app-root>
-<script src="runtime.a4d5b159ba5cb2ab.js" type="module"></script><script src="polyfills.234b05662211e850.js" type="module"></script><script src="main.f8d3504e7ec9f8ed.js" type="module"></script>
+<script src="runtime.a4d5b159ba5cb2ab.js" type="module"></script><script src="polyfills.234b05662211e850.js" type="module"></script><script src="main.299f597575b739af.js" type="module"></script>
 
 </body></html>
